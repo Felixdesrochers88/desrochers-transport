@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Desrochers Transport Inc. | Transport • Tonte • Déneigement</title>
+  <meta name="description" content="Desrochers Transport Inc. : transport, tonte de pelouse et déneigement à Amos et alentours. Soumission rapide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Accueil">
+        <img src="assets/img/logo.png" alt="Desrochers Transport Inc." class="brand__logo">
+      </a>
+
+      <nav class="nav" aria-label="Menu principal">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <div id="navMenu" class="nav__menu">
+          <a href="#services">Services</a>
+          <a href="#apropos">À propos</a>
+          <a href="#soumission">Soumission</a>
+          <button class="nav__search" type="button" aria-label="Rechercher" title="Rechercher">🔍</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero">
+      <img class="hero__bg" src="assets/img/hero.jpg" alt="Camions Desrochers Transport">
+      <div class="hero__overlay"></div>
+
+      <div class="container hero__content">
+        <h1>Bienvenue chez <span class="thin">Desrochers Transport Inc.</span></h1>
+        <p>Service de transport, tonte de pelouse et déneigement.</p>
+        <a class="btn btn--primary" href="#soumission">Demandez une soumission</a>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section__title">Nos Services</h2>
+
+        <div class="cards">
+          <article class="card">
+            <img src="assets/img/service-transport.jpg" alt="Service de transport" class="card__img">
+            <div class="card__body">
+              <h3 class="card__title blue">TRANSPORT</h3>
+              <p>Camions 24 pieds avec hayon élévateur et 16 pieds.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/img/service-tonte.jpg" alt="Tonte de pelouse" class="card__img">
+            <div class="card__body">
+              <h3 class="card__title green">TONTE DE PELOUSE</h3>
+              <p>Tonte rapide et efficace pour votre gazon résidentiel et commercial.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="assets/img/service-deneigement.jpg" alt="Déneigement" class="card__img">
+            <div class="card__body">
+              <h3 class="card__title navy">DÉNEIGEMENT</h3>
+              <p>Déneigement rapide de votre entrée et stationnement.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos + Soumission -->
+    <section id="apropos" class="section section--soft">
+      <div class="container two-col">
+        <div class="about">
+          <h2>À propos de nous</h2>
+          <p>
+            Desrochers Transport Inc. est une entreprise locale spécialisée dans le transport général,
+            la tonte de pelouse et le déneigement. Nous nous engageons à offrir un service fiable,
+            ponctuel et professionnel à Amos et aux alentours.
+          </p>
+
+          <ul class="contact">
+            <li>📍 <strong>Amos et alentours</strong></li>
+            <li>📞 <strong>819-732-2921</strong></li>
+            <li>✉️ <strong>felixdesrochers@outlook.com</strong></li>
+          </ul>
+        </div>
+
+        <div id="soumission" class="formCard">
+          <h2>Soumission / Contactez-nous</h2>
+
+          <!-- Version simple (mailto). On peut le remplacer par Formspree ensuite. -->
+          <form class="form" action="mailto:felixdesrochers@outlook.com" method="post" enctype="text/plain">
+            <label>
+              <span>Votre Nom</span>
+              <input type="text" name="Nom" placeholder="Votre Nom" required>
+            </label>
+
+            <label>
+              <span>Votre Email</span>
+              <input type="email" name="Email" placeholder="Votre Email" required>
+            </label>
+
+            <label>
+              <span>Votre Message</span>
+              <textarea name="Message" rows="5" placeholder="Votre Message" required></textarea>
+            </label>
+
+            <button class="btn btn--primary btn--wide" type="submit">Envoyer</button>
+          </form>
+
+          <p class="formNote">On peut activer un vrai formulaire (sans mailto) quand tu veux.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <small>© <span id="year"></span> Desrochers Transport Inc. Tous droits réservés.</small>
+        <small>GitHub Pages</small>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
