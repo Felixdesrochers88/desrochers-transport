@@ -3,134 +3,141 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Desrochers Transport Inc. | Transport • Tonte • Déneigement</title>
-  <meta name="description" content="Desrochers Transport Inc. : transport, tonte de pelouse et déneigement à Amos et alentours. Soumission rapide." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Desrochers Transport inc. | Transport • Colis • Pelouse • Déneigement</title>
+  <meta name="description" content="Desrochers Transport inc. à Amos — transport général, livraison de colis, entretien de pelouse et déneigement. Soumission rapide." />
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container header__inner">
+  <header class="topbar">
+    <div class="wrap topbar-inner">
       <a class="brand" href="#top" aria-label="Accueil">
-        <img src="assets/img/logo.png" alt="Desrochers Transport Inc." class="brand__logo">
+        <img class="brand-logo" src="assets/logo.png" alt="Desrochers Transport inc." />
       </a>
 
-      <nav class="nav" aria-label="Menu principal">
-        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
-        <div id="navMenu" class="nav__menu">
-          <a href="#services">Services</a>
-          <a href="#apropos">À propos</a>
-          <a href="#soumission">Soumission</a>
-          <button class="nav__search" type="button" aria-label="Rechercher" title="Rechercher">🔍</button>
-        </div>
+      <nav class="menu" aria-label="Navigation">
+        <a href="#services">Services</a>
+        <a href="#apropos">À propos</a>
+        <a href="#soumission">Soumission</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
   <main id="top">
-    <section class="hero">
-      <img class="hero__bg" src="assets/img/hero.jpg" alt="Camions Desrochers Transport">
-      <div class="hero__overlay"></div>
-
-      <div class="container hero__content">
-        <h1>Bienvenue chez <span class="thin">Desrochers Transport Inc.</span></h1>
-        <p>Service de transport, tonte de pelouse et déneigement.</p>
-        <a class="btn btn--primary" href="#soumission">Demandez une soumission</a>
+    <section class="hero" style="background-image:url('assets/hero.jpg')">
+      <div class="hero-overlay"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h1>Bienvenue chez<br>Desrochers Transport inc.</h1>
+          <p>Service de transport, livraison de colis, entretien de pelouse et déneigement.</p>
+          <div class="cta-row">
+            <a class="btn-red" href="#soumission">Demandez une soumission</a>
+            <a class="btn-ghost" href="tel:+18197322921">Appeler : 819‑732‑2921</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Services -->
     <section id="services" class="section">
-      <div class="container">
-        <h2 class="section__title">Nos Services</h2>
+      <div class="wrap">
+        <h2 class="section-title">Nos Services</h2>
 
         <div class="cards">
           <article class="card">
-            <img src="assets/img/service-transport.jpg" alt="Service de transport" class="card__img">
-            <div class="card__body">
-              <h3 class="card__title blue">TRANSPORT</h3>
-              <p>Camions 24 pieds avec hayon élévateur et 16 pieds.</p>
+            <img class="card-img" src="assets/transport.jpg" alt="Transport" />
+            <div class="card-body">
+              <h3 class="card-title blue">TRANSPORT</h3>
+              <p>Transport général, livraison locale et régionale. 24 pieds (hayon) et cube 16 pieds.</p>
             </div>
           </article>
 
           <article class="card">
-            <img src="assets/img/service-tonte.jpg" alt="Tonte de pelouse" class="card__img">
-            <div class="card__body">
-              <h3 class="card__title green">TONTE DE PELOUSE</h3>
-              <p>Tonte rapide et efficace pour votre gazon résidentiel et commercial.</p>
+            <img class="card-img" src="assets/colis.jpg" alt="Livraison de colis" />
+            <div class="card-body">
+              <h3 class="card-title blue2">LIVRAISON DE COLIS</h3>
+              <p>Local, urgent, le jour même. Appel, cueillette et livraison rapide.</p>
             </div>
           </article>
 
           <article class="card">
-            <img src="assets/img/service-deneigement.jpg" alt="Déneigement" class="card__img">
-            <div class="card__body">
-              <h3 class="card__title navy">DÉNEIGEMENT</h3>
-              <p>Déneigement rapide de votre entrée et stationnement.</p>
+            <img class="card-img" src="assets/tonte.jpg" alt="Entretien de pelouse" />
+            <div class="card-body">
+              <h3 class="card-title green">ENTRETIEN DE PELOUSE</h3>
+              <p>Tonte, taille de haies et arbustes, ramassage de feuilles, nettoyage printanier.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img class="card-img" src="assets/deneigement.jpg" alt="Déneigement" />
+            <div class="card-body">
+              <h3 class="card-title red">DÉNEIGEMENT</h3>
+              <p>Entrées et stationnements — résidentiel et commercial. Service ponctuel ou saisonnier.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- À propos + Soumission -->
-    <section id="apropos" class="section section--soft">
-      <div class="container two-col">
+    <section id="apropos" class="section section-soft">
+      <div class="wrap split">
         <div class="about">
           <h2>À propos de nous</h2>
           <p>
-            Desrochers Transport Inc. est une entreprise locale spécialisée dans le transport général,
-            la tonte de pelouse et le déneigement. Nous nous engageons à offrir un service fiable,
-            ponctuel et professionnel à Amos et aux alentours.
+            Desrochers Transport inc. est une entreprise locale basée à Amos. Nous offrons des services fiables,
+            rapides et professionnels en transport, livraison de colis, entretien de pelouse et déneigement.
           </p>
 
-          <ul class="contact">
-            <li>📍 <strong>Amos et alentours</strong></li>
-            <li>📞 <strong>819-732-2921</strong></li>
-            <li>✉️ <strong>felixdesrochers@outlook.com</strong></li>
-          </ul>
+          <div class="infos">
+            <div>📍 <strong>31 3e Avenue Est, Amos, QC J9T‑1E3</strong></div>
+            <div>📞 <strong><a href="tel:+18197322921">819‑732‑2921</a></strong></div>
+            <div>✉️ <strong><a href="mailto:felixdesrochers@outlook.com">felixdesrochers@outlook.com</a></strong></div>
+          </div>
         </div>
 
-        <div id="soumission" class="formCard">
-          <h2>Soumission / Contactez-nous</h2>
+        <div id="soumission" class="formbox">
+          <h2>Soumission / Contactez‑nous</h2>
 
-          <!-- Version simple (mailto). On peut le remplacer par Formspree ensuite. -->
-          <form class="form" action="mailto:felixdesrochers@outlook.com" method="post" enctype="text/plain">
-            <label>
-              <span>Votre Nom</span>
-              <input type="text" name="Nom" placeholder="Votre Nom" required>
-            </label>
-
-            <label>
-              <span>Votre Email</span>
-              <input type="email" name="Email" placeholder="Votre Email" required>
-            </label>
-
-            <label>
-              <span>Votre Message</span>
-              <textarea name="Message" rows="5" placeholder="Votre Message" required></textarea>
-            </label>
-
-            <button class="btn btn--primary btn--wide" type="submit">Envoyer</button>
+          <form id="quoteForm">
+            <input name="name" placeholder="Votre Nom" required />
+            <input name="email" type="email" placeholder="Votre Email" required />
+            <select name="service" required>
+              <option value="" disabled selected>Service désiré…</option>
+              <option>Transport</option>
+              <option>Livraison de colis</option>
+              <option>Entretien de pelouse</option>
+              <option>Déneigement</option>
+            </select>
+            <textarea name="message" rows="6" placeholder="Votre Message (adresse, détails, date souhaitée…)" required></textarea>
+            <button class="btn-red full" type="submit">Envoyer</button>
           </form>
 
-          <p class="formNote">On peut activer un vrai formulaire (sans mailto) quand tu veux.</p>
+          <p class="small-note">Le bouton ouvre votre courriel avec le message prêt à envoyer.</p>
         </div>
       </div>
     </section>
-
-    <footer class="footer">
-      <div class="container footer__inner">
-        <small>© <span id="year"></span> Desrochers Transport Inc. Tous droits réservés.</small>
-        <small>GitHub Pages</small>
-      </div>
-    </footer>
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> Desrochers Transport inc. Tous droits réservés.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("quoteForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const subject = encodeURIComponent("Demande de soumission — " + (data.get("service")||""));
+      const body = encodeURIComponent(
+        "Nom: " + (data.get("name")||"") + "\n" +
+        "Courriel: " + (data.get("email")||"") + "\n" +
+        "Service: " + (data.get("service")||"") + "\n\n" +
+        "Message:\n" + (data.get("message")||"")
+      );
+      window.location.href = "mailto:felixdesrochers@outlook.com?subject=" + subject + "&body=" + body;
+    });
+  </script>
 </body>
 </html>

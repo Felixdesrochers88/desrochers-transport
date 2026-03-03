@@ -1,0 +1,148 @@
+:root{
+  --blue:#1f5ea8;
+  --blue2:#1d4ed8;
+  --red:#d61f26;
+  --text:#0f172a;
+  --muted:#475569;
+  --bg:#ffffff;
+  --soft:#f4f6fb;
+  --shadow: 0 14px 30px rgba(2,6,23,.12);
+  --radius:16px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--text); background:var(--bg);}
+.wrap{width:min(1120px,92%); margin:0 auto;}
+
+.topbar{
+  background:#fff;
+  border-bottom:1px solid #e5e7eb;
+  position:sticky; top:0; z-index:20;
+}
+.topbar-inner{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 0;
+}
+.brand-logo{height:56px; width:auto; display:block;}
+
+.menu{display:flex; gap:26px; align-items:center; font-weight:700;}
+.menu a{color:var(--text); text-decoration:none; opacity:.85;}
+.menu a:hover{opacity:1}
+
+.hero{
+  position:relative;
+  min-height:420px;
+  background-size:cover;
+  background-position:center;
+  border-bottom:1px solid #e5e7eb;
+}
+.hero-overlay{
+  position:absolute; inset:0;
+  background:linear-gradient(90deg, rgba(15,23,42,.62), rgba(15,23,42,.12) 60%, rgba(15,23,42,0));
+}
+.hero-inner{position:relative; height:100%; display:flex; align-items:center; padding:60px 0;}
+.hero-text{max-width:760px; color:#fff;}
+.hero-text h1{margin:0 0 10px; font-size:44px; line-height:1.06; font-weight:900; text-shadow:0 10px 25px rgba(0,0,0,.28);}
+.hero-text p{margin:0 0 18px; font-size:18px; opacity:.95; text-shadow:0 10px 25px rgba(0,0,0,.22);}
+.cta-row{display:flex; gap:12px; flex-wrap:wrap}
+
+.btn-red{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:14px 18px; border-radius:10px;
+  background:var(--red); color:#fff; font-weight:900;
+  text-decoration:none; box-shadow:0 14px 26px rgba(214,31,38,.25);
+}
+.btn-red:hover{filter:brightness(.98)}
+.btn-red.full{width:100%; border:none; cursor:pointer}
+
+.btn-ghost{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:14px 18px; border-radius:10px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.35);
+  color:#fff; font-weight:900;
+  text-decoration:none;
+}
+
+.section{padding:46px 0;}
+.section-title{
+  text-align:center;
+  font-size:34px;
+  margin:0 0 22px;
+  font-weight:900;
+  color:#1f2937;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:18px;
+}
+.card{
+  background:#fff;
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(229,231,235,.9);
+}
+.card-img{width:100%; height:190px; object-fit:cover; display:block;}
+.card-body{padding:16px 16px 18px;}
+.card-title{margin:0 0 8px; font-size:16px; letter-spacing:.6px; font-weight:1000;}
+.card-title.blue{color:var(--blue)}
+.card-title.blue2{color:var(--blue2)}
+.card-title.green{color:#15803d}
+.card-title.red{color:var(--red)}
+.card-body p{margin:0; color:var(--muted); font-size:14px}
+
+.section-soft{background:var(--soft); border-top:1px solid #e5e7eb;}
+.split{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap:22px;
+  align-items:start;
+}
+.about h2{margin:0 0 10px; font-size:34px; font-weight:1000;}
+.about p{margin:0 0 16px; color:var(--muted); font-size:16px;}
+.infos{
+  display:grid; gap:10px;
+  font-weight:700;
+  color:#111827;
+}
+.infos a{color:#111827; text-decoration:none; opacity:.9}
+.infos a:hover{text-decoration:underline}
+
+.formbox{
+  background:#fff;
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+  border:1px solid rgba(229,231,235,.9);
+}
+.formbox h2{margin:0 0 12px; font-size:28px; font-weight:1000;}
+form input, form textarea, form select{
+  width:100%;
+  padding:14px 12px;
+  border-radius:10px;
+  border:1px solid #e5e7eb;
+  font:inherit;
+  margin:10px 0;
+}
+.small-note{margin:10px 0 0; color:var(--muted); font-size:13px;}
+
+.footer{
+  background:#0b1220;
+  color:#e2e8f0;
+  padding:18px 0;
+}
+.footer-inner{font-size:14px; opacity:.95}
+
+@media (max-width: 1000px){
+  .cards{grid-template-columns: repeat(2, 1fr)}
+}
+@media (max-width: 700px){
+  .cards{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .hero-text h1{font-size:34px}
+  .brand-logo{height:46px}
+}
