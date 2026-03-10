@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desrochers Transport inc.</title>
+  <meta name="description" content="Livraison, transport général, entretien de gazon et déneigement à Amos et partout en Abitibi." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --primary: #ef4444;
+      --primary-dark: #dc2626;
+      --border: #e2e8f0;
+      --blue: #1d4ed8;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1140px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--bg);
+      color: white;
+      font-size: 14px;
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .brand img {
+      height: 52px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+
+    nav a:hover { color: var(--primary-dark); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--bg);
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(15, 23, 42, 0.48), rgba(15, 23, 42, 0.58)),
+        url('images/hero-camion.jpg') center/cover no-repeat;
+      color: white;
+      padding: 110px 0 95px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.08;
+      margin: 0 0 18px;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: rgba(255,255,255,0.94);
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 24px;
+      padding: 26px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .hero-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    section { padding: 80px 0; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 40px);
+    }
+
+    .section-title p {
+      margin: 0 auto;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .card-image {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-body {
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .about {
+      background: #f8fafc;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .about-photo {
+      min-height: 420px;
+      border-radius: 26px;
+      background:
+        linear-gradient(rgba(15,23,42,0.14), rgba(15,23,42,0.14)),
+        url('images/transport-general.jpg') center/cover no-repeat;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+    }
+
+    .checklist li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .checklist li::before {
+      content: '✓';
+      color: var(--primary-dark);
+      font-weight: 800;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 26px;
+    }
+
+    .contact-card,
+    form {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+    }
+
+    .contact-card h3,
+    form h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .contact-item {
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font: inherit;
+    }
+
+    .field textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .full { grid-column: 1 / -1; }
+
+    .notice {
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .success {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      font-weight: 700;
+    }
+
+    footer {
+      background: var(--bg);
+      color: rgba(255,255,255,0.9);
+      padding: 28px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .services-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 72px 0 64px;
+      }
+
+      .topbar .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div>Desrochers Transport inc. — Amos, Abitibi</div>
+      <div>Téléphone : <a href="tel:18194448585">819-444-8585</a> · Courriel : <a href="mailto:felixdesrochers@outlook.com">felixdesrochers@outlook.com</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#accueil" class="brand">
+        <img src="logo.png" alt="Logo Desrochers Transport inc." />
+        <span>Desrochers Transport inc.</span>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#contact">Soumission</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Service local et régional</span>
+          <h1>Livraison, transport général, entretien de gazon et déneigement en Abitibi</h1>
+          <p>
+            Une entreprise polyvalente basée à Amos pour vos besoins en livraison, transport général,
+            entretien paysager et déneigement. Service fiable, rapide et professionnel.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Demander une soumission</a>
+            <a class="btn btn-outline" href="tel:18194448585">Appeler maintenant</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>Pourquoi nous choisir ?</h3>
+          <ul class="hero-list">
+            <li>Entreprise basée à Amos</li>
+            <li>Service offert partout en Abitibi</li>
+            <li>Réponse simple et rapide</li>
+            <li>Plusieurs services sous un même toit</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Nos services</h2>
+          <p>
+            Découvrez nos principaux services avec vos vraies images d’entreprise.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <div class="card-image" style="background-image:url('images/livraison.jpg');"></div>
+            <div class="card-body">
+              <h3>Livraison</h3>
+              <p>Service de livraison rapide et fiable pour colis, matériel et marchandises.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image" style="background-image:url('images/transport-general.jpg');"></div>
+            <div class="card-body">
+              <h3>Transport général</h3>
+              <p>Transport local et régional avec un service fiable, ponctuel et professionnel.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image" style="background-image:url('images/gazon.jpg');"></div>
+            <div class="card-body">
+              <h3>Entretien de gazon</h3>
+              <p>Tonte, entretien régulier et travaux saisonniers pour le résidentiel et le commercial.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-image" style="background-image:url('images/deneigement.jpg');"></div>
+            <div class="card-body">
+              <h3>Déneigement</h3>
+              <p>Service hivernal efficace pour entrée, terrain et espaces commerciaux.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="apropos">
+      <div class="container about-grid">
+        <div class="about-photo" aria-label="Photo de camion de l'entreprise"></div>
+        <div>
+          <div class="section-title" style="text-align:left; margin-bottom:0;">
+            <h2>Une présence locale, un service professionnel</h2>
+            <p>
+              Votre entreprise offre plusieurs services pratiques dans la région d’Amos et partout en Abitibi.
+              Le site permet aux clients de voir rapidement vos services et de vous contacter facilement.
+            </p>
+          </div>
+
+          <ul class="checklist">
+            <li>Design simple et professionnel</li>
+            <li>Vos vraies images sur la page</li>
+            <li>Bouton d'appel direct</li>
+            <li>Formulaire de soumission simple</li>
+            <li>Prêt à publier sur GitHub Pages</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Demande de soumission</h2>
+          <p>Laissez vos informations et une courte description de votre besoin. Le message ouvrira votre courriel prêt à envoyer.</p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-card">
+            <h3>Nous joindre</h3>
+            <div class="contact-item"><strong>Entreprise :</strong> Desrochers Transport inc.</div>
+            <div class="contact-item"><strong>Téléphone :</strong> <a href="tel:18194448585">819-444-8585</a></div>
+            <div class="contact-item"><strong>Courriel :</strong> <a href="mailto:felixdesrochers@outlook.com">felixdesrochers@outlook.com</a></div>
+            <div class="contact-item"><strong>Ville :</strong> Amos, Québec</div>
+            <div class="contact-item"><strong>Territoire :</strong> Abitibi</div>
+          </div>
+
+          <form id="quoteForm">
+            <h3>Parlez-nous de votre projet</h3>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" required />
+              </div>
+
+              <div class="field">
+                <label for="telephone">Téléphone</label>
+                <input id="telephone" name="telephone" type="tel" required />
+              </div>
+
+              <div class="field">
+                <label for="courriel">Courriel</label>
+                <input id="courriel" name="courriel" type="email" required />
+              </div>
+
+              <div class="field">
+                <label for="service">Service demandé</label>
+                <select id="service" name="service" required>
+                  <option value="">Choisir un service</option>
+                  <option>Livraison</option>
+                  <option>Transport général</option>
+                  <option>Entretien de gazon</option>
+                  <option>Déneigement</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+
+              <div class="field full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Décrivez votre besoin, la ville, la date ou toute autre information utile." required></textarea>
+              </div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Envoyer la demande</button>
+            <p class="notice">Le formulaire ouvre votre application de courriel avec le message prêt à envoyer.</p>
+            <div class="success" id="successMessage">Votre message est prêt à être envoyé dans votre courriel.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Desrochers Transport inc. — Tous droits réservés.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.getElementById('quoteForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nom = document.getElementById('nom').value.trim();
+      const telephone = document.getElementById('telephone').value.trim();
+      const courriel = document.getElementById('courriel').value.trim();
+      const service = document.getElementById('service').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const sujet = encodeURIComponent('Demande de soumission - ' + service);
+      const corps = encodeURIComponent(
+        'Nom : ' + nom + '\n' +
+        'Téléphone : ' + telephone + '\n' +
+        'Courriel : ' + courriel + '\n' +
+        'Service : ' + service + '\n\n' +
+        'Message :\n' + message
+      );
+
+      window.location.href = 'mailto:felixdesrochers@outlook.com?subject=' + sujet + '&body=' + corps;
+      document.getElementById('successMessage').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
